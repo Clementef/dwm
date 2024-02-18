@@ -1,2 +1,2 @@
 #!/bin/bash
-cp config.def.h config.h && make && sudo make clean install
+make && sudo make clean install
