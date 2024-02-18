@@ -1,2 +1,2 @@
 #!/bin/bash
-patch -p1 < $1 && echo "$1" >> applied_patches.txt
+patch -p1 < $1
