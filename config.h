@@ -104,11 +104,12 @@ static const Key keys[] = {
     { MODKEY,                       XK_k,       focusstack,     {.i = -1} },
 	{ MODKEY,                       XK_h,       setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_l,       setmfact,       {.f = +0.05} },
-    {MODKEY|ShiftMask,		        XK_j,       movestack,	   {.i = +1 } },
-    {MODKEY|ShiftMask,		        XK_k,       movestack,	   {.i = -1 } },
+    {MODKEY|ShiftMask,		        XK_j,       movestack,	    {.i = +1 } },
+    {MODKEY|ShiftMask,		        XK_k,       movestack,      {.i = -1 } },
+	{ MODKEY|ShiftMask,             XK_h,  zoom,           {0} },
 
     // quit dwm
-	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+	{ MODKEY|ShiftMask,             XK_q,       quit,           {0} },
 
 };
 
