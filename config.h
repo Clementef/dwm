@@ -7,7 +7,7 @@ static const unsigned int gappx[]   = { 5 };   /* default gap between windows in
 static const unsigned int snap      = 16;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 0;        /* 0 means bottom bar */
-static const char *fonts[]          = { "FiraCode:size=12" };
+static const char *fonts[]          = { "FiraCode Nerd Font:size=12" };
 static const char col_gray1[]       = "#282a36"; // bg
 static const char col_gray2[]       = "#44475a"; // hl
 static const char col_gray3[]       = "#f8f8f2"; // white
@@ -30,6 +30,7 @@ static const Rule rules[] = {
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
 	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
+	{ "Bitwarden",NULL,       NULL,       0,            1,           -1 },
 };
 
 /* layout(s) */
