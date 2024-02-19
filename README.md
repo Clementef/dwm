@@ -1,5 +1,5 @@
 # dwm
-### personal dwm build
+### personal build
 
 #### patches:
     - dwm-pertag_with_sel-20231003-9f88553
