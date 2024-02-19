@@ -1,6 +1,8 @@
 # dwm
 ### personal build
 
+![dwm demo](static/demo.png)
+
 #### patches:
     - dwm-pertag_with_sel-20231003-9f88553
     - dwm-functionalgaps-pertagfunctionality-6.2
