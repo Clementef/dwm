@@ -9,6 +9,7 @@
     - dwm-movestack-20211115-a786211
     - dwm-leftlayout-20210721-138b405
     - dwm-togglefloatingcenter-20210806-138b405f
+    - dwm-warp-6.4.diff
 
 dwm - dynamic window manager
 ============================
