@@ -181,7 +181,7 @@ static long getstate(Window w);
 static int gettextprop(Window w, Atom atom, char *text, unsigned int size);
 static void grabbuttons(Client *c, int focused);
 static void grabkeys(void);
-static void incnmaster(const Arg *arg);
+// static void incnmaster(const Arg *arg);
 static void keypress(XEvent *e);
 static void killclient(const Arg *arg);
 static void manage(Window w, XWindowAttributes *wa);
@@ -213,7 +213,7 @@ static void setup(void);
 static void seturgent(Client *c, int urg);
 static void showhide(Client *c);
 static void sigchld(int unused);
-static void spawn(const Arg *arg);
+// static void spawn(const Arg *arg);
 static void tag(const Arg *arg);
 static void tagmon(const Arg *arg);
 static void tile(Monitor *m);
@@ -1024,12 +1024,12 @@ grabkeys(void)
 	}
 }
 
-void
-incnmaster(const Arg *arg)
-{
-	selmon->nmaster = selmon->pertag->nmasters[selmon->pertag->curtag] = MAX(selmon->nmaster + arg->i, 0);
-	arrange(selmon);
-}
+// void
+// incnmaster(const Arg *arg)
+// {
+// 	selmon->nmaster = selmon->pertag->nmasters[selmon->pertag->curtag] = MAX(selmon->nmaster + arg->i, 0);
+// 	arrange(selmon);
+// }
 
 #ifdef XINERAMA
 static int
@@ -1734,17 +1734,17 @@ sigchld(int unused)
 	while (0 < waitpid(-1, NULL, WNOHANG));
 }
 
-void
-spawn(const Arg *arg)
-{
-	if (fork() == 0) {
-		if (dpy)
-			close(ConnectionNumber(dpy));
-		setsid();
-		execvp(((char **)arg->v)[0], (char **)arg->v);
-		die("dwm: execvp '%s' failed:", ((char **)arg->v)[0]);
-	}
-}
+// void
+// spawn(const Arg *arg)
+// {
+// 	if (fork() == 0) {
+// 		if (dpy)
+// 			close(ConnectionNumber(dpy));
+// 		setsid();
+// 		execvp(((char **)arg->v)[0], (char **)arg->v);
+// 		die("dwm: execvp '%s' failed:", ((char **)arg->v)[0]);
+// 	}
+// }
 
 void
 tag(const Arg *arg)
