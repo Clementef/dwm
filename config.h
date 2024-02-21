@@ -8,15 +8,15 @@ static const unsigned int snap      = 16;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 0;        /* 0 means bottom bar */
 static const char *fonts[]          = { "FiraCode Nerd Font:size=11.3" };
-static const char col_gray1[]       = "#282a36"; // bg
-static const char col_gray2[]       = "#44475a"; // hl
-static const char col_gray3[]       = "#f8f8f2"; // white
-static const char col_gray4[]       = "#ff5555"; // red
+static const char col_bg[]          = "#282a36"; // bg
+static const char col_hl[]          = "#44475a"; // hl
+static const char col_fg[]          = "#f8f8f2"; // white
+static const char col_comment[]     = "#6272a4"; // red
 static const char col_cyan[]        = "#bd93f9"; // purple
-static const char *colors[][3]      = {
-	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray3, col_gray2, col_cyan  },
+static const char *colors[][4]      = {
+	/*               fg         bg          border      floating */
+	[SchemeNorm] = { col_fg,    col_bg,     col_hl,     col_hl      },
+	[SchemeSel]  = { col_fg,    col_hl,     col_cyan,   col_comment },
 };
 
 /* tagging */
@@ -27,9 +27,8 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
+	/* class                        instance    title   tags mask   isfloating  monitor */
+	{ "Nm-connection-editor",       NULL,       NULL,   1,          1,          -1 },
 };
 
 /* layout(s) */
@@ -41,8 +40,7 @@ static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen win
 static const Layout layouts[] = {
 	/* symbol     arrange function */
 	{ "[T]",      tile },    /* first entry is default */
-	// { "><>",      NULL },    /* no layout function means floating behavior */
-	{ "[M]",      monocle },
+	{ "[M]",      monocle }
 };
 
 /* key definitions */
@@ -61,12 +59,6 @@ static const Layout layouts[] = {
 const unsigned int gappxinc = 5;
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
-	// { MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
-	// { MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
-	// { MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
-	// { MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },
-	// { MODKEY,                       XK_Return, zoom,           {0} },
-
     // select all tags
 	{ MODKEY,                       XK_9,      view,           {.ui = ~0 } },
 	{ MODKEY|ShiftMask,             XK_9,      tag,            {.ui = ~0 } },

@@ -10,6 +10,7 @@
     - dwm-leftlayout-20210721-138b405
     - dwm-togglefloatingcenter-20210806-138b405f
     - dwm-warp-6.4.diff
+    - wm-float-border-color-20231008-3a7ea45f.diff
 
 dwm - dynamic window manager
 ============================
