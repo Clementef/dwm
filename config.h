@@ -31,6 +31,7 @@ static const Rule rules[] = {
 	{ "Nm-connection-editor",       NULL,       NULL,   0,          1,          -1 },
 	{ "Bitwarden",                  NULL,       NULL,   0,          1,          -1 },
 	{ "Signal",                     NULL,       NULL,   0,          1,          -1 },
+	{ "firefox",                    NULL,  "Library",   0,          1,          -1 },
 };
 
 /* layout(s) */
@@ -82,7 +83,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_minus,  setgaps,        {.i = -5 } },
 	{ MODKEY,                       XK_equal,  setgaps,        {.i = +5 } },
 	{ MODKEY,                       XK_0,  setgaps,        {.i = GAP_RESET } },
-	{ MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = GAP_TOGGLE} },
+	{ MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = -999} },
 
     // tags
     { MODKEY,                       XK_w,       killclient,     {0} },
