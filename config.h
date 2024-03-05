@@ -20,7 +20,7 @@ static const char *colors[][4]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "a", "s", "d", "f", "g"};
+static const char *tags[] = { "a", "s", "d", "f", "g", "x", "c"};
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -80,10 +80,12 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
+
+    // gaps
 	{ MODKEY,                       XK_minus,  setgaps,        {.i = -5 } },
 	{ MODKEY,                       XK_equal,  setgaps,        {.i = +5 } },
-	{ MODKEY,                       XK_0,  setgaps,        {.i = GAP_RESET } },
-	{ MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = -999} },
+	{ MODKEY,                       XK_0,      setgaps,        {.i = GAP_RESET } },
+	// { MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = -999} },
 
     // tags
     { MODKEY,                       XK_w,       killclient,     {0} },
@@ -92,12 +94,15 @@ static const Key keys[] = {
     TAGKEYS(                        XK_d,                       2)
     TAGKEYS(                        XK_f,                       3)
     TAGKEYS(                        XK_g,                       4)
+    TAGKEYS(                        XK_x,                       5)
+    TAGKEYS(                        XK_c,                       6)
 
     // stack
     { MODKEY,                       XK_j,       focusstack,     {.i = +1} },
     { MODKEY,                       XK_k,       focusstack,     {.i = -1} },
 	{ MODKEY,                       XK_h,       setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_l,       setmfact,       {.f = +0.05} },
+    { MODKEY|ShiftMask,             XK_equal,   setmfact,       {.f = 1.0 + 0.5 } },
     { MODKEY|ShiftMask,             XK_0,       setmfact,       {.f = 1.0 + mfact } },
     {MODKEY|ShiftMask,		        XK_j,       movestack,	    {.i = +1 } },
     {MODKEY|ShiftMask,		        XK_k,       movestack,      {.i = -1 } },
