@@ -29,7 +29,7 @@ static const Rule rules[] = {
 	 */
 	/* class                        instance    title   tags mask   isfloating  monitor */
 	{ "Nm-connection-editor",       NULL,       NULL,   0,          1,          -1 },
-	{ "Bitwarden",                  NULL,       NULL,   5,          1,          -1 },
+	{ "Bitwarden",                  NULL,       NULL,   1 << 4,     1,          -1 },
 	{ "Signal",                     NULL,       NULL,   0,          1,          -1 },
 	{ "firefox",                    NULL,  "Library",   0,          1,          -1 },
 	{ "firefox",                    NULL,"Open File",   0,          1,          -1 },
