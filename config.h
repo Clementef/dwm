@@ -20,7 +20,7 @@ static const char *colors[][4]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "a", "s", "d", "f", "g", "x", "c"};
+static const char *tags[] = { "a", "s", "d", "f", "x", "c"};
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -94,9 +94,8 @@ static const Key keys[] = {
     TAGKEYS(                        XK_s,                       1)
     TAGKEYS(                        XK_d,                       2)
     TAGKEYS(                        XK_f,                       3)
-    TAGKEYS(                        XK_g,                       4)
-    TAGKEYS(                        XK_x,                       5)
-    TAGKEYS(                        XK_c,                       6)
+    TAGKEYS(                        XK_x,                       4)
+    TAGKEYS(                        XK_c,                       5)
 
     // stack
     { MODKEY,                       XK_j,       focusstack,     {.i = +1} },
