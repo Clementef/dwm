@@ -1,2 +1,2 @@
 #!/bin/bash
-make && sudo make clean install
+sudo make clean install
