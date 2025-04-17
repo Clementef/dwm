@@ -1,0 +1,12 @@
+--- dwm.c	2021-02-27 23:47:41.352759785 -0600
++++ dwm.c	2021-03-01 17:10:10.402964866 -0600
+@@ -286,6 +291,9 @@ struct Pertag {
+ 	unsigned int sellts[LENGTH(tags) + 1]; /* selected layouts */
+ 	const Layout *ltidxs[LENGTH(tags) + 1][2]; /* matrix of tags and layouts indexes  */
+ 	int showbars[LENGTH(tags) + 1]; /* display bar for the current tag */
++
++	int drawwithgaps[LENGTH(tags) + 1]; /* gaps toggle for each tag */
++	int gappx[LENGTH(tags) + 1]; /* gaps for each tag */
+ };
+ 
+ /* compile-time check if all tags fit into an unsigned int bit array. */
