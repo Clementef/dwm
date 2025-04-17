@@ -7,7 +7,7 @@ static const unsigned int gappx[]   = { 5 };   /* default gap between windows in
 static const unsigned int snap      = 16;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 0;        /* 0 means bottom bar */
-static const char *fonts[]          = { "FiraCode Nerd Font:size=12" };
+static const char *fonts[]          = { "FiraCode:size=12" };
 static const char col_bg[]          = "#282a36"; // bg
 static const char col_hl[]          = "#44475a"; // hl
 static const char col_fg[]          = "#f8f8f2"; // white
